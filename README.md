@@ -1,15 +1,27 @@
 # conf_pro
+
 configurations for professional tools, like VS, Sublime, bash, tmux, Vim, Source Insight etc.
 
+
 ## Source Insgith
+
 ![Source Insight](https://github.com/sleepreading/res/blob/master/si4.png)
 
+
+## Intellij Idea
+
+![idea](https://github.com/sleepreading/res/blob/master/idea.png)
+
+
 ## vim-preview
+
 ![gvim](https://github.com/tianshiwokao/res/blob/master/20171118102955.jpg)
 ![macvim](https://github.com/tianshiwokao/res/blob/master/20171118103001.png)
 
+
 ----
 ## tips
+
 * **MyMacro.dsm** : Visual C++ 6.0 macro files. Please assign Your favorite shortcuts for its funcitons.
 * **MyMacro.txt** : for VS2010 and high. [Tools] - [Macros] - [Macros IDE]
 * **AutoHotKey.ahk** :
