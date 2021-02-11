@@ -1,5 +1,8 @@
 # conf_pro
-configurations for professional tools, like VS, Sublime, bash, tmux, Vim. etc.
+configurations for professional tools, like VS, Sublime, bash, tmux, Vim, Source Insight etc.
+
+## Source Insgith
+![Source Insight](https://github.com/sleepreading/res/blob/master/si4.png)
 
 ## vim-preview
 ![gvim](https://github.com/tianshiwokao/res/blob/master/20171118102955.jpg)
