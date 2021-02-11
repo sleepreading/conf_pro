@@ -1,0 +1,15 @@
+[Unit]
+Description=kong service
+After=network.target
+
+
+[Service]
+#User=root
+#Group=root
+Type=forking
+ExecStart=/usr/local/bin/kong start -c /etc/kong/kong.conf
+ExecReload=/usr/local/bin/kong reload
+ExecStop=/usr/local/bin/kong stop
+
+[Install]
+WantedBy=multi-user.target

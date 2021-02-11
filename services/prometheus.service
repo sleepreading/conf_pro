@@ -1,0 +1,20 @@
+[Unit]
+Description=prometheus
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/prometheus/prometheus \
+ --config.file=/usr/local/prometheus/prometheus.yml \
+ --storage.tsdb.path=/var/lib/prometheus \
+ --storage.tsdb.retention.time=15d \
+ --web.read-timeout=5m \
+ --web.max-connections=10 \
+ --query.max-concurrency=20 \
+ --query.timeout=2m \
+ --web.enable-lifecycle
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

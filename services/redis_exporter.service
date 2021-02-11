@@ -1,0 +1,11 @@
+[Unit]
+Description=redis_exporter
+After=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/bin/redis_exporter -redis.addr 192.168.22.33:6379 -redis.password 123456
+
+[Install]
+WantedBy=multi-user.target
+

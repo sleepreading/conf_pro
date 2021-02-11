@@ -1,0 +1,24 @@
+[Unit]
+Description=Etcd Server
+Documentation=https://github.com/coreos/Etcd
+After=network.target
+Wants=network-online.target
+
+[Service]
+User=root
+Type=notify
+WorkingDirectory=/var/lib/etcd/
+#EnvironmentFile=-/etc/etcd.conf
+ExecStart=/usr/local/bin/etcd \
+          --name=gconf \
+          --listen-client-urls=http://0.0.0.0:2379 \
+          --advertise-client-urls=http://0.0.0.0:2379 \
+          --data-dir=/var/lib/etcd
+Restart=on-failure
+RestartSec=5s
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
+
+

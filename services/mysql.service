@@ -1,0 +1,20 @@
+# install mysql will ship with the file: mysqld.service
+# /usr/lib/systemd/system
+[Unit]
+Description=MySQL Community Server
+After=network.target
+
+[Service]
+User=mysql
+Group=mysql
+PIDFile=/var/run/mysqld/mysqld.pid
+PermissionsStartOnly=true
+ExecStartPre=/usr/bin/mysql-systemd-start pre
+ExecStart=/usr/bin/mysqld_safe
+ExecStartPost=/usr/bin/mysql-systemd-start post
+TimeoutSec=600
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+Alias=mysql.service

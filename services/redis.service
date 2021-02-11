@@ -1,0 +1,14 @@
+# /usr/lib/systemd/system
+[Unit]
+Description=redis
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf
+ExecStop=/usr/local/bin/redis-cli shutdown
+#ExecStop=/usr/local/bin/redis-server stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

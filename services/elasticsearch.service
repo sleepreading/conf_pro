@@ -1,0 +1,12 @@
+[Unit]
+Description=elasticsearch
+
+[Service]
+User=es
+LimitNOFILE=100000
+LimitNPROC=100000
+ExecStart=/usr/local/elasticsearch-6.8.3/bin/elasticsearch
+
+[Install]
+WantedBy=multi-user.target
+
